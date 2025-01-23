@@ -5,18 +5,25 @@
 
 # Accepts budget as an argument.
 # Returns the suggestion as a string.
-
-if budget < 100:
-            return "Local day trips."
-        elif budget < 500:
-            return "Nearby cities."
-        else:
-            return "International travel!"
-
-
-
-
-
+from budgetFunction import bugetFunction 
+from calculator import calculator  
+from calculator import add    
+from weather_advice import advice
+from shopping_list import shoppinglist
+from TemperatureConverter import celsius_to_fahrenheit
+from TemperatureConverter import  fahrenheit_to_celsius
+from inventory import inventory
+from password import validate_password
+print(bugetFunction(300) )
+print(calculator(10,5))
+print(add(10,5))
+print (advice("rainy"))
+print (shoppinglist("carrots"))
+print (celsius_to_fahrenheit(16))
+print(fahrenheit_to_celsius(67))
+print(inventory("apples"))
+print(validate_password("char168"))
+#-----------------------------------------------------------------git--------------------------------------
 
 # Instructions for Students:
 
@@ -24,16 +31,6 @@ if budget < 100:
 # Make a Calculator class that contains these functions as methods.
 # Ensure that division checks for zero before attempting the operation.
 # Move the arithmetic logic into a file named calculator.py.
-a = 10
-b = 5
-print(a + b)
-print(a - b)
-print(a * b)
-if b != 0:
-    print(a / b)
-else:
-    print("Cannot divide by zero")
-    
 
 ####################################################################################################
 # Instructions for Students:
@@ -41,15 +38,6 @@ else:
 # Create a function that takes weather as an argument and returns the appropriate advice.
 # Optionally, create a class WeatherAssistant with a method for weather advice.
 #Move the weather advice logic into a file named weather_advice.py.
-weather = "rainy"
-if weather == "rainy":
-    print("Take an umbrella.")
-elif weather == "sunny":
-    print("Wear sunglasses.")
-elif weather == "cold":
-    print("Wear a jacket.")
-else:
-    print("Weather unknown. Dress comfortably.")
 
 
 
@@ -62,13 +50,6 @@ else:
 # Optionally, create a ShoppingList class that manages the list with the above methods.
 #Move the shopping list logic into a file named shopping_list.py.
 
-shopping_list = ["apples", "bananas", "carrots"]
-shopping_list.append("dates")
-shopping_list.remove("bananas")
-for item in shopping_list:
-    print(item)
-
-
 
 # Instructions for Students:
 
@@ -77,13 +58,6 @@ for item in shopping_list:
 # fahrenheit_to_celsius(fahrenheit)
 # Consider creating a TemperatureConverter class with these methods.
 
-celsius = 25
-fahrenheit = (celsius * 9/5) + 32
-print(f"{celsius}°C is {fahrenheit}°F")
-
-fahrenheit = 77
-celsius = (fahrenheit - 32) * 5/9
-print(f"{fahrenheit}°F is {celsius}°C")
 
 
 
@@ -129,3 +103,4 @@ if len(password) >= 8:
         print("Password needs a number")
 else:
     print("Password is too short")
+      
